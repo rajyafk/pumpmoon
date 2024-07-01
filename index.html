@@ -7,19 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="background">
-        <img src="background.jpeg" alt="Background" class="background-img">
+    <div class="parallax">
+        <div class="background">
+            <img src="background.jpeg" alt="Background" class="background-img">
+        </div>
         <div class="content">
             <div class="header">
                 <img src="icon.jpeg" alt="Pump Coin Icon" class="token-icon">
                 <h1>Pump Coin</h1>
             </div>
             <button class="purchase-btn" onclick="redirectToPurchasePage()">Buy Pump Coin</button>
+            <div class="side-buttons">
+                <button class="social-btn" onclick="redirectToTwitter()">Twitter</button>
+                <button class="social-btn" onclick="redirectToDiscord()">Discord</button>
+            </div>
+            <div class="price-chart">
+                <h2>Bitcoin Price</h2>
+                <div id="price-chart-container"></div>
+            </div>
             <div class="rocket-container">
-                <img src="pepe-rocket.png" alt="Pepe Rocket" class="rocket">
+                <img src="pepe-rocket.png" alt="Pepe Rocket" class="rocket" onclick="moveRocket()">
             </div>
         </div>
     </div>
+    <footer>
+        Pump Coin is now live on DEX Screener! Grab it before it’s gone!
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
